@@ -30,6 +30,7 @@ def load_cup_data(train=True):
 def split_data(X, y, test_size=0.1, random_state=42):
     """
     Splits data into Development set (for CV) and Internal Test set.
+    We use the same random_state to ensure consistent splits across all algos.
     """
     return train_test_split(X, y, test_size=test_size, random_state=random_state)
 
