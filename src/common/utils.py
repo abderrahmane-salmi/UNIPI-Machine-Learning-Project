@@ -13,9 +13,7 @@ def load_cup_data(train=True):
         X (DataFrame): The 12 input features
         y (DataFrame): The 4 target variables
     """
-    dataset_type = "TR" if train else "TS"
-    file_path = "../data/ml_cup/ML-CUP25-{dataset_type}.csv"
-    
+    file_path = "../data/ml_cup/ML-CUP25-TR.csv" if train else "../data/ml_cup/ML-CUP25-TS.csv"
     
     # Read CSV, skipping lines starting with '#'
     df = pd.read_csv(file_path, comment='#', header=None)
